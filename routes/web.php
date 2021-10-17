@@ -13,12 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-
-Route::get('products', function() {
+Route::get('/', function() {
 
 	$allProducts = App\Models\Product::all();
 	$ruleOne = new App\Models\RuleOne;
