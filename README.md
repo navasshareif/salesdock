@@ -1,6 +1,6 @@
 Installation Process:
 
-1. 	Clone the branch
+1. 	Clone the project
 	<b>git clone git@github.com:navasshareif/salesdock.git</b>
 
 2. 	Create a file <b>.env</b> and copy the content <b>.env.example</b>
