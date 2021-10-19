@@ -17,7 +17,9 @@ Installation Process:
 7. 	Run <b>php artisan serve</b>
 
 
-Future enhancement:
+
+
+<b>Future enhancement:</b>
 	To create new rules please follow the below steps:
 	
 	-> Create a modal by extending the Products model
@@ -26,7 +28,7 @@ Future enhancement:
 	
 	-> Either you can add global scope or create new local scopes based on the criteria
 	
-	   <b>AddGlobalScope</a>
+	   1. Add Global Scope
 	   protected static function booted()	   
 	    {
 		static::addGlobalScope('ruleDownloadSpeedGreaterThan100AndFiber', function (Builder $builder) {
@@ -35,7 +37,7 @@ Future enhancement:
 		});
 	    }
 	
-	  <b>Add Local scope</a>
+	  2. Add Local scope
 	  public function scopeRuleUploadSpeedLessThanAndTechnology($qry, $speed, $tech) {
 		$this->scopeRuleUploadSpeedLessThan($qry, $speed);
 		$this->scopeTechnology($qry, $tech);
