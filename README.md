@@ -19,11 +19,15 @@ Installation Process:
 
 Future enhancement:
 	To create new rules please follow the below steps:
+	
 	-> Create a modal by extending the Products model
+	
 	-> Set the $table = "products"
+	
 	-> Either you can add global scope or create new local scopes based on the criteria
+	
 	   <b>AddGlobalScope</a>
-	   protected static function booted()
+	   protected static function booted()	   
 	    {
 		static::addGlobalScope('ruleDownloadSpeedGreaterThan100AndFiber', function (Builder $builder) {
 			$builder->DownloadSpeedGreaterThan(100)
