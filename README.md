@@ -15,3 +15,24 @@ Installation Process:
 6.	Run <b>php artisan db:seed --class=ProductSeeder</b>
 
 7. 	Run <b>php artisan serve</b>
+
+
+Future enhancement:
+	To create new rules please follow the below steps:
+	-> Create a modal by extending the Products model
+	-> Set the $table = "products"
+	-> Either you can add global scope or create new local scopes based on the criteria
+	   <b>AddGlobalScope</a>
+	   protected static function booted()
+	    {
+		static::addGlobalScope('ruleDownloadSpeedGreaterThan100AndFiber', function (Builder $builder) {
+			$builder->DownloadSpeedGreaterThan(100)
+					->Technology('fiber');
+		});
+	    }
+	
+	  <b>Add Local scope</a>
+	  public function scopeRuleUploadSpeedLessThanAndTechnology($qry, $speed, $tech) {
+		$this->scopeRuleUploadSpeedLessThan($qry, $speed);
+		$this->scopeTechnology($qry, $tech);
+	  }
