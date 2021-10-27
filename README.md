@@ -10,11 +10,9 @@ Installation Process:
 
 4.	Run <b>php artisan key:generate</b>
 
-5.	Run <b>php artisan migrate</b>
+5.	Run <b>php artisan migrate --seed</b>
 
-6.	Run <b>php artisan db:seed --class=ProductSeeder</b>
-
-7. 	Run <b>php artisan serve</b>
+6. 	Run <b>php artisan serve</b>
 
 
 
